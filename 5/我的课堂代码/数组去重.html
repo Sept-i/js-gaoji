@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        
+        // 数组去重
+        let arr = ["a", "b", "c", "d", "a", "b", "e", "f"];
+        var newArr = arr.reduce((acc, item, index) => {
+            if (!acc.includes(item)) {
+                acc.push(item)
+            }
+            return acc;
+        }, [])
+        console.log(newArr);
+
+
+
+    </script>
+</body>
+
+</html>

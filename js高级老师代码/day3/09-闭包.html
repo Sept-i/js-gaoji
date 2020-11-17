@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // 闭包：封闭的包裹
+    // 在js中，什以可以形成包裹？函数
+    // 闭包是函数，但是函数不一定是闭包
+
+    // 闭包的作用：在全局作用域下访问局部变量
+
+    function fn(){
+        var num = Math.random();
+
+        // function foo(){
+        //     return num;
+        // }
+        // return foo;
+
+        return function (){
+            return num;
+        }
+
+    }
+
+    var f = fn()
+
+    var res1 = f()
+    console.log(res1);
+    var res2 = f()
+    console.log(res2);
+
+
+    // var res = 
+
+
+
+
+
+
+</script>
+</html>

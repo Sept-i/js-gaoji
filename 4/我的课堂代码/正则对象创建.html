@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  1.构造函数模式
+        // var reg=new RegExp('正则表达式','匹配模式')
+        // var reg=new RegExp('123');
+
+
+        // 2. 字面量(推荐)
+        // var reg=/正则表达式/匹配模式
+        var reg = /abc/i;
+        console.log(reg.test('abc')); //true
+        console.log(reg.test('abC')); //false
+
+
+        // 匹配模式:有两种
+        // 1. g  global   全局匹配
+        // 2. i  ignore   忽略大小写
+    </script>
+</body>
+
+</html>

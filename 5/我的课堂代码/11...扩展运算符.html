@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ...拆分数组或对象,以逗号分隔参数序列
+        var arr = ['1', '2', '3'];
+        console.log(...arr); //1 2 3
+        console.log(1, 2, 3); //1 2 3
+        //console.log(); 把,当成参数分隔,打印出来就没有了
+
+        // 求数组最大值
+        console.log(Math.max.apply(null,[1,2,3,4]));
+        console.log(Math.max(...[1,2,3,4]));
+        
+        
+    </script>
+</body>
+
+</html>

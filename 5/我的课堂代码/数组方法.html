@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Array.from()伪数组转真数组
+        // arr.find()查找数组的成员.没有返undefined
+        // arr.findIndex()查找数组的成员下标 ,没有返-1
+        // arr.includes()找数组中是否包含给定的值,返布尔值
+
+        let arr = [{
+            id: 1,
+            name: "jack"
+        }, {
+            id: 2,
+            name: "rose"
+        }, {
+            id: 2,
+            name: "tom"
+        }]
+
+        // find
+        let result = arr.find(item => item.id == 2);
+        console.log(result);
+
+
+        // findIndex
+        let index = arr.findIndex(item => item.id == 2);
+        console.log(index);
+
+        // includes
+        let one = [1, 2, 3].includes(2) // true 
+        let two = [1, 2, 3].includes(4) // false
+        console.log(one);
+        console.log(two);
+
+
+
+
+        //reduce
+        
+    </script>
+</body>
+
+</html>

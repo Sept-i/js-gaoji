@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <SCript>
+        // 变量的生命周期为闭包做准备,函数可以作为返回值是为了闭包做准备的
+        // 1 全局变量
+        // 生:函数调用时
+        // 死:关闭窗口
+        var num = 100;
+
+        // 2 局部变量
+        // 生:函数调用时
+        // 死:函数调用完毕时
+        function fn() {
+            var num = 1000;
+            return num;
+        }
+        var res1 = fn()
+        var res2 = fn() //这两个调用的地址不是一个
+//  var num = 1000;返第一次的死了 然后在第二次重新活,返第二次又死
+        console.log(res1, res2);
+        console.log(res1 == res2);
+    </SCript>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Person(name,age){
+        this.name = name;
+        this.age = age
+    }
+
+
+    // Person.prototype.sing = function(){
+    //     console.log(this.name + " can sing");
+    // }
+    // Person.prototype.run = function(){
+    //     console.log(this.name + " can run");
+    // }
+    // Person.prototype.eat = function(){
+    //     console.log(this.name + " can eat");
+    // }
+
+    Person.prototype = {
+        constructor:Person,
+        sing:function(){
+            console.log(this.name + " can sing");
+        },
+        run:function(){
+            console.log(this.name + " can run");
+        },
+        eat:function(){
+            console.log(this.name + " can eat");
+        },
+    }
+
+
+    var p1 = new Person("tom",4);
+    console.log(p1);
+    p1.eat()
+
+    // 神秘对象的constructor属性：
+    console.log(Person==p1.__proto__.constructor);
+
+
+
+
+
+
+
+
+</script>
+</html>

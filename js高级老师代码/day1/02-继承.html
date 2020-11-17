@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 继承：关键词 extends
+
+    class Father {
+        constructor(x,y){
+            this.x = x;
+            this.y = y
+        }
+        money(){
+            console.log("i can make money");
+        }
+        add(){
+            console.log(this.x+this.y);
+        }
+
+    }
+
+    class Son extends Father {
+        constructor(x,y,z){
+            super(x,y)
+            this.z = z; 
+        }
+        sub(){
+            console.log(this.x-this.z);
+        }
+    }
+
+    var s = new Son(1,2,3);
+    console.log(s);
+    s.add()
+    s.sub()
+
+
+
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+
+        // return this;
+        // return 1,2,3;
+        return [1,2,3]
+
+    }
+
+    // 构造函数的返回值问题：
+    // 如果构造函数有return,并且返回的是值类型，忽略这个值类值的数据，返回的是this
+    // 如果构造函数有return,并且返回的是引用类型，忽略this，返回的是这个引用类值的数据
+
+    var p3 = new Person("tom",4);
+   
+    console.log(p3);
+   
+
+
+
+
+
+</script>
+</html>

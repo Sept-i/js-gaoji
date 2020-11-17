@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 变量的生命周期
+    // 1.全局变量
+    // 生：打开浏览器时，在全局作用域下有就了该变量
+    // 死：关闭窗口
+    var num = 100;
+
+    // 2.局部变量
+    // 生：函数调用时
+    // 死：函数调用完毕时
+    function fn(){
+        var num = 1000;
+        return num;
+    }
+    var res1 = fn()
+    var res2 = fn()
+
+    console.log(res1,res2);
+    console.log(res1==res2);
+
+
+
+
+
+
+
+
+
+</script>
+</html>

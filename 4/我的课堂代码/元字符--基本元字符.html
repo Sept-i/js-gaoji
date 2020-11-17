@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 基本元字符  你要找什么
+
+        var rg=/[^abc]/;//取反 
+
+        var rg=/[abc]/;  //只要包含 a||b||c 都是true
+        console.log(rg.test('abc'));
+        console.log(rg.test('aaa'));
+
+
+        var rg=/[a-zA-Z0-9]/;  
+
+
+        var rg=/^[abc]$/;  //三选一 返true
+
+        console.log('-----------');
+       
+       
+       
+       
+        var rg=/^[a-z]$/; //26个小写英文字母任意一个字母返true  多选一
+        var
+    </script>
+</body>
+</html>

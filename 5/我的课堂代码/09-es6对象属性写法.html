@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // es6中,对象中属性名和属性值(变量)一样时,可以简写
+        // es6中,对象中方法也可以简写
+        // let person = {
+        //     name: 'jack',
+        //     age: 18,
+        //     say:function(){
+        //         console.log("i can say");
+        //     }
+
+        // }
+
+        var name = "jack";
+        var age = "18";
+        let person = {
+            name,
+            age,
+            say() {
+                console.log("i can say");
+            }
+
+        }
+        console.log(person);
+        person.say()
+    </script>
+</body>
+
+</html>

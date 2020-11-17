@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function orz(a, b) {
+            // console.log(this);
+            this.a = a
+            this.b = b
+            
+        }
+        var ojk = {
+            name: 'ok',
+            3:'3',
+            age: 18,
+            d:'3',
+            h:'5'
+        }
+
+        orz.call(ojk, 123, 456)
+
+
+        console.log(ojk);
+
+
+        console.log(orz());
+    </script>
+</body>
+
+</html>

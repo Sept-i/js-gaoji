@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+        this.sing = function(){
+            console.log("i can sing");
+        }
+    }
+
+    var p1= new Person("jack",18);
+    console.log(p1);
+
+    // 实例化：构造函数创建对象的过程叫做实例化
+    // 实例：创建出来的对象叫做实例
+    // 实例成员：具体对象身上的属性与方法
+    // 实例属性：如 name,age
+    // 实例方法：如sing()
+    
+    // 静态成员：构造函数(类class)身上的属性与方法叫做静态成员
+    Person.name = 123;
+    Person.say = function(){}
+    console.dir(Person)
+
+
+
+
+
+
+</script>
+</html>

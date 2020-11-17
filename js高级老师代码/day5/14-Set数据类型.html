@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 1.Set 集合
+    // Set与Array的区别：Set没有重复的成员
+
+    let s1 = new Set()
+    console.log(s1);
+    console.log(s1.size);
+
+    let s2 = new Set([1,2,3,1,2,3])
+    console.log(s2);
+    console.log(s2.size);
+
+    // 2.应用：数组去重
+
+    // 3.set对象方法
+    // add()
+    console.log(s2.add(4).add(1));
+    // delete()
+    s2.delete(2)
+    console.log(s2);
+    // has()
+    // clear()
+
+    // 4.set数据的遍历 forEach
+    s2.forEach(item=>console.log(item));
+
+
+
+
+
+</script>
+</html>

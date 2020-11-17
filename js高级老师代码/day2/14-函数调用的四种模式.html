@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 函数调用四种模式    this指向
+    window.abc = 123;  //var abc = 123;
+    console.log(window.abc);
+
+    function fn(){}    //相当于window.fn = function(){}
+    // 1.函数模式  函数模式是一种特殊的方法模式
+    function fn(){
+        console.log(this);  //window
+    }
+    fn()
+
+    // 2.方法模式  (函数调用前有对宿主对象)
+    var obj = {
+        name:"jack",
+        say:function(){
+            console.log(this);  //obj
+        }
+    }
+    obj.say();
+    obj['say']()
+
+    // 3.构造器模式
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    var p = new Person("jack",18)
+    
+    // 4.上下文模式
+
+
+
+
+
+
+
+</script>
+</html>

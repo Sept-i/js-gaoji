@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// 函数可以作为参数，也可以作为返回值
+
+    // 1.函数可以作为参数
+    function fn(a,b,callback){
+        console.log(a+b);
+        callback && callback()
+    }
+    fn(1,2,function(){
+        console.log(123);
+    })
+
+    // 2.函数可以作为返回值
+    function foo(){
+        function fun(){
+            console.log(456);
+        }
+        // fun是函数，可以返回
+        return fun;
+    }
+
+    var res = foo()
+    res()
+
+
+    
+
+
+
+
+
+</script>
+</html>

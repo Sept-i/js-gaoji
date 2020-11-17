@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 你要从哪找
+        // 首尾元字符(边界符)(位置符): ^   $
+        var reg = /123/; //只要包含123返true
+        console.log(reg.test('31121'));
+
+
+        // var reg=/^123/; //以123开头  $以...结尾
+        // console.log(reg.test('123')); //true
+        // console.log(reg.test('12345')); //true
+
+
+        // var reg=/^123$/; //(精准匹配)以123开头  以123结尾 ,并且字符串只能是123
+        // console.log(reg.test('123')); //true
+        // console.log(reg.test('123123')); //false
+
+
+
+        // 总结:你要找什么  你要从哪找   你要找多少
+    </script>
+</body>
+
+</html>

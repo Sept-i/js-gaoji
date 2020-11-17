@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 数组中的forEach  map  filter  some  every
+
+    // 1.forEach遍历
+    var arr1 = ["小苍","小泷","小韦","小波"];
+    arr1.forEach(function(value,index){
+        // if(index==2) continue
+        console.log(value,index);
+    })
+    // 注意点1：形参先有value,再写index
+    // 注意点2: forEach中 不能中止循环 不能用break,continue
+
+    // 2.map()  映射
+    // 语法：有返回值
+    var arr2  = [1,2,3,4];  //=>[2,4,6,8]
+    var newArr2 = arr2.map(function(value){
+         return value*value
+    })
+    console.log(newArr2);
+
+    // 3.filter 过滤
+    // 语法：有返回值
+    // 把小于3的成员找出来 =>[1,2]
+    var arr3 = [1,2,3,4,5];
+    var newArr3 = arr3.filter(function(value,index){
+        return value<3;
+    })
+    console.log(newArr3);
+
+    // 4.some 一些
+    // 语法：有返回值 是布尔型
+    var arr4 = [5,1,2,3,4];
+    // 当前数组中是否有大于3的成员
+    var num = 0
+    var bool4 = arr4.some(function(value,index){
+        num++
+        return value > 3
+    })
+    console.log(bool4);
+    console.log(num);
+
+    // 5.every  所有
+    // 语法：有返回值 是布尔型
+    var arr5 = [1,2,3,4,5];
+    // 当前数组中是否全部小于4的成员
+    var bool5 = arr5.every(function(value,index){
+        return value < 4
+    })
+    console.log(bool5);
+
+
+
+
+
+
+
+
+</script>
+</html>

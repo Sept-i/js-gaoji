@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="">
+        用户名:<input type="text" name="name" id="uname" >
+        <span> 请输入用户名</span>
+        <!-- 
+            或直接这样写 
+             用户名:<input type="text" name="" id="uname" required pattern="^[a-zA-Z0-9_-]{6,16}$">  正则不要/ /斜杠
+        <span> 请输入用户名</span>
+        -->
+    </form>
+
+
+    <script>
+        var form = document.querySelector('form');
+        var uname = document.querySelector('#uname');
+        form.addEventListener('submit', function (e) {
+            var reg = /^[a-zA-Z0-9_-]{6,16}$/
+            var bool = reg.test(uname.value);
+
+            if (bool) {
+                alert('合法')
+            } else {
+                alert('不合法')
+            }
+
+            //将来在这写Ajax代码提交数据到服务器
+
+            e.preventDefault()
+        })
+    </script>
+</body>
+
+</html>

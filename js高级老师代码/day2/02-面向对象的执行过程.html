@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+    }
+
+    var p3 = new Person("tom",4);
+    var p4 = new Person("jerry",3);
+
+    console.log(p3);
+    console.log(p4);
+
+    // 执行过程：
+    // 1. new 在内存中开辟空间
+    // 2. this 变量指向这个空间
+    // 3. 执行函数体中的代码，给空间中的这个对象赋值
+    // 4. 返回这个this对象 
+
+
+
+
+</script>
+</html>

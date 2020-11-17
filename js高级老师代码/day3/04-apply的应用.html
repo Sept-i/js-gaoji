@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr = [1,2,3,4,5];
+    // 求数组的最大值
+    // var max = arr[0];
+    // for(var i=1;i<arr.length;i++){
+    //     if(max<arr[i]){
+    //         max = arr[i]
+    //     }
+    // }
+    // console.log(max);
+
+    // 1.利用了apply的第二个参数必须是数组的特性
+    // 2.借用了Math.max(1,2,3,4)
+    var res = Math.max.apply(null,[1,2,3,4])
+    console.log(res);
+
+   
+
+
+
+
+
+</script>
+</html>

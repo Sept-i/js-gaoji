@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var obj = (function(){
+        var a = 100;
+        var b = 1000;
+        return {
+            getNum1:function(){
+                 return a
+            },
+            getNum2:function(){
+                 return b
+            },
+            getSum:function(){
+                return a+b;
+            }
+        }
+    })();
+
+    var res1 = obj.getNum1();
+    console.log(res1);
+    var res2 = obj.getNum2();
+    console.log(res2);
+    
+
+
+
+
+
+
+
+</script>
+</html>

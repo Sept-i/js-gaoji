@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 类：模具
+        class Hero {
+            // constructor这个函数在new时自动执行
+            constructor(name,color,height){
+                this.name = name;
+                this.color = color;
+                this.height = height;
+            }
+            eat(food){
+                console.log("i can eat");
+            }
+            jump(){
+                console.log("i can jump");
+            }
+            bigJump(){
+                console.log("i can bigJump");
+            }
+            attact(){
+                console.log("i can attact");
+            }
+        }
+
+
+        var m1 = new Hero("红色马里奥","red","30cm");
+        var m2 = new Hero("绿色马里奥","green","30cm");
+
+        console.log(m1);
+        console.log(m2);
+
+
+        m1.attact();
+
+        m2.bigJump()
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

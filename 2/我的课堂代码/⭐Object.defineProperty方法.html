@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // value:值
+        // writable：是否可重写  默认为false不可重写  true可重写
+        // enumerable：是否可以遍历  默认为false不可遍历
+        // configurable 默认false  表示不允许删除这个属性
+        //vue中双向绑定的底层原理→defineProperty
+        var obj = {
+            id: 1,
+            name: "xiaomi",
+            price: 1000
+        }
+
+        Object.defineProperty(obj, "num", {
+            value: 100,
+            writable: true
+        })
+        console.log(obj);
+        obj.num--
+        console.log(obj);
+        delete obj.address;
+        console.log(obj.address);
+
+    </script>
+</body>
+
+</html>

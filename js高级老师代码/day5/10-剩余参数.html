@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    let sum = (...args)=>{
+        console.log(args);
+        var total = 0;
+
+        args.forEach(item=>total +=item)
+
+        return total;
+    }
+
+    sum(10,20);
+    sum(10,20,30)
+
+
+
+
+
+</script>
+</html>

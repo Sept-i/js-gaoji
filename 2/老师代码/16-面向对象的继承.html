@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 面向对象的特性：多态，封装，继承，抽象
+
+    // 1.继承：可以从父级拿过来一些东西
+    // 程序：父级有一些功能，子代可以少写一些功能，从父级继承过来
+
+    function Father(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    Father.prototype.money = function(){
+        console.log("i have a lot of money");
+    }
+
+
+    function Son(name,age,score){
+        // this.name = name;
+        // this.age = age;
+        // s.Father(name,age);
+        Father.call(this,name,age) //相当于  this.Father(name,age);
+        this.score = score;
+    }
+
+
+    Son.prototype = new Father()
+    Son.prototype.constructor = Son;
+    
+    var s = new Son("jack",18,30);
+    console.log(s);
+    s.money()
+
+
+
+
+
+</script>
+</html>

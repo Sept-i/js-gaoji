@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // Array.from()   
+    // arr.find() 查找数组的成员
+    // arr.findIndex() 查找数组的成员的下标
+    // arr.includes()  是否包含
+
+    // let arr = [{id:1,name:"jack"},{id:2,name:"rose"},{id:2,name:"tom"}];
+
+    // let result = arr.find(item=>item.id==2);
+    // console.log(result);
+
+    // let index = arr.findIndex(item=>item.id==2);
+    // console.log(index);
+
+    
+    // 数组去重
+    let arr = ["a","b","c","d","a","b","e","f"];
+    
+    var newArr = arr.reduce((acc,item,index)=>{
+        if(!acc.includes(item)){
+            acc.push(item)
+        }
+        return acc;
+    },[])
+    console.log(newArr);
+
+
+
+
+
+
+</script>
+</html>

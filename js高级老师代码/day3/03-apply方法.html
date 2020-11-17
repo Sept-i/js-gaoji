@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // apply:函数借用
+
+    function fn(x,y){
+        console.log(x+y);
+        console.log(this);
+    }
+    var o = {
+        name:"rose"
+    }
+    fn.apply()
+
+    // 语法：
+    // 1.函数名.apply()：当apply方法中没有参数时或第一个参数为空，相当于是函数模式 函数名()
+    // fn.apply()      //相当于 fn()
+    // 2.函数名.call(对象)：当call方法中有第一个参数对象时，相当于是方法模式 对象.函数名()
+    // fn.apply(o)   //相当于 obj.fn()
+
+    // 如果原函数有形参时的语法
+    // 1.函数名.apply(null,[1,2]) => 函数模式
+    fn.apply(null,[1,2])
+    // 2.函数名.apply(对象,[1,2]) => 方法模式
+    fn.apply(o,[1,2])
+
+
+    // 总结：call与apply
+    // 这两个方法都是方法的借用
+    // 1.当这两个方法的第一个实参是null或不写，这是函数模式 this->window
+    // 1.当这两个方法的第一个实参是对象，这是方法模式 this->对象
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <script>
+
+        // 注意点：
+        // 1 bind方法不会函数调用
+        // 2 bind方法有返回值 ，返回值也是函数
+        // 3 返回值函数改变了this的指向
+
+        
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            this.disabled = true;
+            setTimeout(function () {
+                this.disabled = false;
+            }.bind(this), 2000)
+
+            //箭头函数
+            // setTimeout(() => {
+            //     this.disabled = false;
+            // }, 2000)
+
+        })
+    </script>
+</body>
+
+</html>

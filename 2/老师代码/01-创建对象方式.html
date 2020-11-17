@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 字面量
+    // var p1 = {name:"zhangsan",age:20};
+
+    // new Object()
+    // var p2 = new Object();
+    // p2.name = "lisi";
+    // p2.age = 30;
+
+    // 创建10个对象：批量生产对象
+
+    // 工厂模式
+    function createPerson(name,age){
+        var obj = {};
+        obj.name = name;
+        obj.age = age;
+
+        return obj;
+    }
+
+    p1 = createPerson("jack",18);
+    p2 = createPerson("rose",21);
+
+    console.log(p1);
+    console.log(p2);
+
+    // 构造函数
+    // 构造函数-> 模板 模具
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+    }
+
+    var p3 = new Person("tom",4);
+    var p4 = new Person("jerry",3);
+
+    console.log(p3);
+    console.log(p4);
+
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            width: 200px;
+            height: 30px;
+            background-color: skyblue;
+            list-style: none;
+            margin-top:3px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+<script>
+
+    // function fn(){
+    //     var num = 100;
+
+    //     return function(){
+    //         return num
+    //     }
+    // }
+    // var f = fn();
+
+    // 变体1-----------------
+    // var f = (function (){
+    //     var num = 100;
+    //     return function(){
+    //         return num
+    //     }
+    // })();
+
+    // var res = f();
+    // console.log(res);
+
+    // 应用1----------------------
+    // var lis = document.querySelectorAll("li");
+    // for(var i=0;i<lis.length;i++){
+    //     (function(i){  //var i=0
+    //         lis[i].onclick = function(){
+    //             alert(i)
+    //         }
+    //     })(i)
+    // }
+
+    // 应用2----------------------
+    for(var i=0;i<=5;i++){
+        (function(i){
+            // var i = 0
+            setTimeout(function(){
+                    console.log(i);
+                },1000*i)
+        })(i) 
+    }
+
+
+
+
+
+
+</script>
+</html>

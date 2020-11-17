@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // 浅拷贝：只是拷贝了数据的一层
+   var obj = {
+       name:"jack",
+       age:18,
+       hobby:['play',"dance","coding"]
+   }
+//    var o = {}
+
+//    for(var k in obj){
+//       o[k] = obj[k]
+//    }
+
+  
+
+   var o =  Object.assign(obj)
+   console.log(o);
+
+</script>
+</html>

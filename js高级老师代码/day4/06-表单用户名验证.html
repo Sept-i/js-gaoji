@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+       用户名：<input type="text" name="name" id="uname" required pattern="^[a-zA-Z0-9_-]{6,16}$">
+        <input type="submit" value="提交">
+    </form>
+</body>
+<script>
+    //  'markJordan'
+    //  '我的名字叫markJordan'
+    //  /^[a-zA-Z0-9_-]{6,16}$/
+
+    var form = document.querySelector("form");
+    var uname = document.querySelector("#uname")
+    form.addEventListener("submit",function(e){
+        var reg = /^[a-zA-Z0-9_-]{6,16}$/
+        var bool = reg.test(uname.value);
+
+        if(bool){
+            alert("合法")
+        }else {
+            alert("不合法")
+        }
+
+        // 将来在这写ajax代码提交数据到服务器
+
+        e.preventDefault();
+    })
+
+
+
+
+</script>
+</html>

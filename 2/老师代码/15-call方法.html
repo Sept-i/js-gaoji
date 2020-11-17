@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function fn(x,y){
+        console.log(x+y);
+        console.log(this);
+    }
+    var obj = {
+        name:"tom"
+    }
+
+    // 这种写法污染了obj宿主对象
+    // obj.fn = fn;
+    // obj.fn();
+
+    // call方法:实现了 "方法的借用"
+    // fn.call(obj)
+
+    // 语法：
+    // 1.函数名.call()：当call方法中没有参数时或第一个参数为空，相当于是函数模式 函数名()
+    // fn.call()      //相当于 fn()
+    // 2.函数名.call(对象)：当call方法中有第一个参数对象时，相当于是方法模式 对象.函数名()
+    // fn.call(obj)   //相当于 obj.fn()
+
+    // 如果原函数有形参时的语法
+    // 1.函数名.call(null,1,2) => 函数模式
+    fn.call(null,1,2)  //3 window
+    // 2.函数名.call(对象,1,2) => 方法模式
+    fn.call(obj,1,2)  //3 {name:"tom"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

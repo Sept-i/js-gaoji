@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function foo(){
+        console.log(arguments);
+
+        // arguments的callee属性指向当前函数的地址
+
+        console.log(arguments.callee==foo);
+    }
+
+    foo(1,2,3)
+
+
+
+
+
+</script>
+</html>

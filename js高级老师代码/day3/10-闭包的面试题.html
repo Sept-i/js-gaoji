@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // ---------题1-----------------
+    // var n = 0;
+    // function a(){
+    //     var n = 10;
+    //     function b(){
+    //         n++;
+    //         alert(n);	  
+    //     }
+    //     b();
+    //     return b;
+    // }
+    // var c = a();
+    // c();  
+    // alert(n);
+
+// ------题2------------------------
+    // var a = 9; //0->1->0->1->2
+    // function fn(){
+    //     a = 0;
+    //     return function(b){ 
+    //         return b + a++; 
+    //     }
+    // }
+    // var f = fn();
+    // var m = f(5);
+    // alert(m); //5
+    // var n = fn()(5);
+    // alert(n); //5
+    // var x = f(5);    
+    // alert(x); //6  
+    // alert(a); //2
+
+
+// 声明一个函数 f(2,3)=>5 且 f(2)(3)=>5
+
+    function sum(){
+        if(arguments.length==2){
+            return arguments[0]+arguments[1]
+        }
+        
+        if(arguments.length==1){
+            var arg = arguments[0];
+            return function(){
+                return arguments[0] + arg;
+            }
+        }
+    }
+
+    var res = sum(2,3)
+    console.log(res);
+    var res1 = sum(2)(3);
+    console.log(res1);
+
+
+
+</script>
+</html>

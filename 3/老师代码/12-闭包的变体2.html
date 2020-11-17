@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var arr = (function(){
+        var a = 100;
+        var b = 1000;
+
+        return [
+            function(){
+                return a;
+            },
+            function(){
+                return b;
+            }
+        ]
+
+    })();
+
+    var res1 = arr[0]();
+    console.log(res1);
+    var res2 = arr[1]();
+    console.log(res2);
+    
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function Person(name,age){
+    //     this.name = name;
+    //     this.age = age;
+    //     this.sing = function(){
+    //         console.log(this.name+" can sing");
+    //     }
+
+    // }
+
+    // var p1= new Person("jack",18);
+    // console.log(p1);
+    // p1.sing()
+
+    // // var p2 = ...
+    // // ...
+
+    // var p100 = new Person("rose",21);
+    // p100.sing()
+
+
+    // prototype 原型对象  神秘对象
+
+    function Person(name,age){
+        this.name = name;
+        this.age = age
+    }
+
+    Person.prototype.sing = function(){
+        console.log(this.name + " can sing");
+    }
+    Person.prototype.gender = "人妖";
+
+    // 原型存在的意义：节省内存空间
+
+    var p1 = new Person("tom",4);
+    console.log(p1);
+    // p1自己身上没有属性与方法，会自动的去原型中去找
+    p1.sing()
+    console.log(p1.gender);
+
+
+
+
+
+</script>
+</html>
